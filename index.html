@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNS Padel Academy | Clases de Pádel en Campanillas, Málaga</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aprende y mejora tu juego en FNS Padel Academy, ubicada en el club La Mirada Pádel (Campanillas, Málaga). Clases de pádel para adultos, niños y competición con Funes y Raquel.">
+    <meta name="keywords" content="padel, FNS padel academy, la mirada padel, clases padel malaga, clases padel campanillas, escuela padel adultos, padel infantil malaga, jugar padel malaga, reservar pista padel">
+    <meta name="author" content="FNS Padel Academy">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fns-padelacademy.com/">
+    
+    <!-- Open Graph / Facebook / Instagram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fns-padelacademy.com/">
+    <meta property="og:title" content="FNS Padel Academy | Escuela de Pádel en Málaga">
+    <meta property="og:description" content="Entrena con profesionales en un ambiente familiar único. Escuela de adultos, infantil y competición en La Mirada Pádel.">
+    <meta property="og:image" content="assets/hero-bg.jpg">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fns-padelacademy.com/">
+    <meta name="twitter:title" content="FNS Padel Academy | Escuela de Pádel en Málaga">
+    <meta name="twitter:description" content="Aprende y mejora tu juego en FNS Padel Academy. Clases de pádel para todas las edades y niveles en Campanillas.">
+    <meta name="twitter:image" content="assets/hero-bg.jpg">
+    
+    <!-- JSON-LD Structured Data (LocalBusiness / SportsActivityLocation) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "FNS Padel Academy",
+      "image": [
+        "https://fns-padelacademy.com/assets/logo.png",
+        "https://fns-padelacademy.com/assets/hero-bg.jpg",
+        "https://fns-padelacademy.com/assets/court.jpg"
+      ],
+      "url": "https://fns-padelacademy.com/",
+      "telephone": "+34647847065",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "La Mirada Pádel, Carretera de Cártama a Campanillas (Santa Rosalía Maqueda)",
+        "addressLocality": "Campanillas, Málaga",
+        "postalCode": "29590",
+        "addressRegion": "Málaga",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.721473,
+        "longitude": -4.567341
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/fns_padelacademy/"
+      ]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo-container" aria-label="FNS Padel Academy - Inicio">
+                <img src="assets/logo.png" alt="FNS Padel Academy Logo" class="logo-img">
+                <span class="logo-text">FNS <span class="accent-text">Padel</span></span>
+            </a>
+            
+            <nav class="nav" id="nav-menu" aria-label="Menú principal">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#programas" class="nav-link">Programas</a></li>
+                    <li><a href="#instalaciones" class="nav-link">Instalaciones</a></li>
+                    <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-music" id="music-toggle" aria-label="Activar música motivadora" title="Música motivadora 🎵">
+                    <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+                <a href="https://playtomic.com/es/clubs/la-mirada-padel" target="_blank" rel="noopener noreferrer" class="btn btn-secondary header-btn" id="btn-header-playtomic" aria-label="Reservar pista en La Mirada Padel vía Playtomic">
+                    <i class="fa-solid fa-calendar-check"></i> Reservar Pista
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="inicio">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-tagline"><i class="fa-solid fa-trophy"></i> Escuela de Pádel Profesional</span>
+                    <h1 class="hero-title">Eleva tu Pádel al <span class="gradient-text">Siguiente Nivel</span></h1>
+                    <p class="hero-description">
+                        Entrena en <strong>FNS Padel Academy</strong>, con base en el club <strong>La Mirada Pádel</strong> (Campanillas, Málaga). Formación de calidad, ambiente familiar y diversión garantizada para todas las edades.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/34647847065?text=Hola!%20Quiero%20reservar%20mi%20primera%20clase%20de%20prueba%20gratis%20en%20FNS%20Padel%20Academy." target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-hero-whatsapp" aria-label="Contactar por WhatsApp para una clase gratis">
+                            <i class="fa-brands fa-whatsapp"></i> Clase de Prueba Gratis
+                        </a>
+                        <a href="https://playtomic.com/es/clubs/la-mirada-padel" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btn-hero-playtomic" aria-label="Alquilar pista en Playtomic">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i> Alquilar Pista
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Pistas de Cristal</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Alumnos Activos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.4★</span>
+                            <span class="stat-label">Valoración Google</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,87.43,26.47,163,46.77,242.44,69.65,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about section" id="nosotros">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="about-image-wrapper reveal-left">
+                        <div class="about-image-card">
+                            <img src="assets/coaching.jpg" alt="Funes dando instrucciones técnicas en una clase de adultos de FNS Padel Academy" class="about-img" loading="lazy">
+                            <div class="experience-badge">
+                                <span class="badge-years">15+</span>
+                                <span class="badge-text">Años de Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-info reveal-right">
+                        <span class="section-subtitle">¿Quiénes Somos?</span>
+                        <h2 class="section-title">Pasión, Técnica y un Ambiente Familiar Único</h2>
+                        <p class="about-text">
+                            En <strong>FNS Padel Academy</strong> no solo formamos jugadores de pádel; creamos una comunidad. Liderados por <strong>Funes y Raquel</strong>, nuestra escuela destaca por el trato humano, la dedicación y el entusiasmo en cada entrenamiento.
+                        </p>
+                        <p class="about-text">
+                            Creemos que el pádel se aprende mejor en un entorno donde te sientas como en casa. Por eso, tanto si estás empezando desde cero como si buscas competir al más alto nivel, en nuestras instalaciones de La Mirada Pádel encontrarás el espacio ideal.
+                        </p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
+                                <div class="feature-content">
+                                    <h3>Trato Cercano y Familiar</h3>
+                                    <p>Nuestra mayor prioridad es la socialización y el ambiente de club.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
+                                <div class="feature-content">
+                                    <h3>Metodología Adaptativa</h3>
+                                    <p>Entrenamientos diseñados específicamente para tu nivel físico y técnico.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i></div>
+                                <div class="feature-content">
+                                    <h3>Eventos y Pulls Sociales</h3>
+                                    <p>Actividades los fines de semana, barbacoas y torneos internos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMS SECTION -->
+        <section class="programs section" id="programas">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Nuestros Servicios</span>
+                    <h2 class="section-title">Programas para Todos los Niveles</h2>
+                    <p class="section-description">
+                        Sea cual sea tu objetivo, tenemos un grupo y un formato de entrenamiento perfecto para ti.
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <!-- Program Card 1 -->
+                    <div class="card program-card reveal-up">
+                        <div class="card-img-wrapper">
+                            <img src="assets/kids.jpg" alt="Niños sonriendo sosteniendo palas en la escuela infantil de FNS Padel Academy" class="card-img" loading="lazy">
+                            <div class="card-tag">Infantil</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Escuela Infantil (4-15 años)</h3>
+                            <p class="card-text">
+                                Diseñado para que los más pequeños aprendan los fundamentos del pádel, psicomotricidad y valores deportivos en un ambiente lleno de diversión.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Grupos reducidos por edades</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Juegos de coordinación</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Material adaptado</li>
+                            </ul>
+                            <a href="https://wa.me/34647847065?text=Hola!%20Me%20interesa%20la%20Escuela%20Infantil%20de%20FNS%20Padel%20Academy%20para%20mi%20hijo/a." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" aria-label="Preguntar sobre escuela infantil por WhatsApp">Más Información</a>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 2 -->
+                    <div class="card program-card featured-card reveal-up" style="animation-delay: 0.2s;">
+                        <div class="card-img-wrapper">
+                            <img src="assets/coaching.jpg" alt="Adulto practicando golpeo con la guía del monitor en FNS Padel Academy" class="card-img" loading="lazy">
+                            <div class="card-tag tag-featured">Más Popular</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Escuela de Adultos</h3>
+                            <p class="card-text">
+                                Desde iniciación absoluta hasta perfeccionamiento táctico. Aprende la técnica de golpeo, posicionamiento en pista y estrategias para ganar tus partidos.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Iniciación, Medio y Avanzado</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Clases de 1h o 1.5h semanales</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Partidos organizados</li>
+                            </ul>
+                            <a href="https://wa.me/34647847065?text=Hola!%20Quiero%20apuntarme%20o%20saber%20más%20de%20la%20Escuela%20de%20Adultos%20de%20FNS%20Padel%20Academy." target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-block" aria-label="Reservar plaza en escuela de adultos por WhatsApp">Reservar Plaza</a>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 3 -->
+                    <div class="card program-card reveal-up" style="animation-delay: 0.4s;">
+                        <div class="card-img-wrapper">
+                            <img src="assets/hero-bg.jpg" alt="Remate aéreo de un jugador en la sesión de competición de FNS Padel" class="card-img" loading="lazy">
+                            <div class="card-tag">Personalizado</div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Particulares y Competición</h3>
+                            <p class="card-text">
+                                Clases individuales (1 alumno) o en pareja (2 alumnos) para una corrección técnica acelerada. O únete a los grupos de competición para preparar torneos.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Atención 100% personalizada</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Preparación física específica</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Flexibilidad de horarios</li>
+                            </ul>
+                            <a href="https://wa.me/34647847065?text=Hola!%20Me%20gustaría%20recibir%20información%20sobre%20clases%20particulares%20o%20el%20grupo%20de%20competición." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" aria-label="Consultar tarifas de clases particulares por WhatsApp">Consultar Tarifas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FACILITIES SECTION -->
+        <section class="facilities section" id="instalaciones">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="facilities-info reveal-left">
+                        <span class="section-subtitle">El Club</span>
+                        <h2 class="section-title">Nuestra Sede: La Mirada Pádel</h2>
+                        <p class="facilities-text">
+                            Desarrollamos todos nuestros entrenamientos en las instalaciones de <strong>La Mirada Pádel</strong>, un club de referencia en la zona de Campanillas (Málaga). Un espacio diseñado para disfrutar del deporte al aire libre y con todas las comodidades.
+                        </p>
+                        
+                        <div class="facilities-specs">
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-grip-lines-vertical" aria-hidden="true"></i></div>
+                                <h4>5 Pistas</h4>
+                                <p>De cristal con césped de calidad para un bote óptimo y seguro.</p>
+                            </div>
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-square-parking" aria-hidden="true"></i></div>
+                                <h4>Parking Fácil</h4>
+                                <p>Aparcamiento gratuito y cómodo para todos los alumnos del club.</p>
+                            </div>
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></div>
+                                <h4>Cafetería y Terraza</h4>
+                                <p>El punto de reunión perfecto para comentar el partido y socializar.</p>
+                            </div>
+                            <div class="spec-card">
+                                <div class="spec-icon"><i class="fa-solid fa-shower" aria-hidden="true"></i></div>
+                                <h4>Vestuarios</h4>
+                                <p>Instalaciones totalmente equipadas a tu entera disposición.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="facilities-action">
+                            <a href="https://playtomic.com/es/clubs/la-mirada-padel" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-facilities-playtomic" aria-label="Alquilar pista en el club La Mirada Padel vía Playtomic">
+                                <i class="fa-solid fa-calendar-days"></i> Alquilar Pista en Playtomic
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="facilities-gallery reveal-right">
+                        <div class="gallery-wrapper">
+                            <img src="assets/court.jpg" alt="Pistas de cristal azules al atardecer en el club La Mirada Padel en Málaga" class="gallery-img-main" loading="lazy">
+                            <div class="gallery-badge">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Campanillas, Málaga
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials section" id="testimonios">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Testimonios</span>
+                    <h2 class="section-title">Lo que dicen nuestros alumnos</h2>
+                    <p class="section-description">
+                        La opinión de nuestra comunidad de La Mirada Pádel es nuestro mayor orgullo.
+                    </p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <!-- Testimonial 1 -->
+                    <div class="card testimonial-card reveal-up">
+                        <div class="rating">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Increíble ambiente. Funes y Raquel te hacen sentir como en casa desde el primer minuto. Las clases con Funes han mejorado mi juego una barbaridad. La pull de los viernes es imperdible!"
+                        </p>
+                        <div class="user-info">
+                            <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                            <div>
+                                <h4 class="user-name">Carlos G.</h4>
+                                <span class="user-role">Alumno Escuela Adultos</span>
+                            </div>
+                        </div>
+                        <span class="google-badge"><i class="fa-brands fa-google" aria-hidden="true"></i> Opinión de Google</span>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="card testimonial-card featured-testimonial reveal-up" style="animation-delay: 0.2s;">
+                        <div class="rating">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Un club con un trato súper cercano y muy familiar. La escuela de pádel es fantástica tanto para adultos como para niños. Los monitores tienen muchísima paciencia y adaptan los entrenos a tu nivel."
+                        </p>
+                        <div class="user-info">
+                            <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                            <div>
+                                <h4 class="user-name">Marta S.</h4>
+                                <span class="user-role">Madre de alumnos</span>
+                            </div>
+                        </div>
+                        <span class="google-badge"><i class="fa-brands fa-google" aria-hidden="true"></i> Opinión de Google</span>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="card testimonial-card reveal-up" style="animation-delay: 0.4s;">
+                        <div class="rating">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "El mejor sitio en Campanillas para jugar al pádel y pasar un buen rato. Hay muy buen rollo entre los jugadores y organizan eventos geniales. ¡Muy recomendado!"
+                        </p>
+                        <div class="user-info">
+                            <div class="avatar"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+                            <div>
+                                <h4 class="user-name">Javier R.</h4>
+                                <span class="user-role">Jugador habitual</span>
+                            </div>
+                        </div>
+                        <span class="google-badge"><i class="fa-brands fa-google" aria-hidden="true"></i> Opinión de Google</span>
+                    </div>
+                </div>
+                
+                <div class="text-center testimonial-link-wrapper">
+                    <a href="https://www.google.com/search?sca_esv=f2f41032b44be3af&sxsrf=APpeQnvKvMhHVXDNM0loCzIvj0gVNisdkg:1783278720574&q=la+mirada+padel&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_yA1qPIkJRVUqR4JsvBSwHBPgtljCKVHUWlX6c_hz9FSLzmR5jXAsqV2njDSuvJfk6n3XLk%3D" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="btn-more-reviews" aria-label="Ver todas las reseñas de Google en una pestaña nueva">
+                        <i class="fa-brands fa-google"></i> Ver opiniones en Google
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contacto">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Contacto</span>
+                    <h2 class="section-title">¡Únete a la Academia!</h2>
+                    <p class="section-description">
+                        Ponte en contacto con nosotros para resolver tus dudas o reservar tu clase de prueba gratuita.
+                    </p>
+                </div>
+                
+                <div class="grid grid-2">
+                    <!-- Contact Form Card -->
+                    <div class="card contact-card reveal-left">
+                        <h3 class="card-title">Envíanos un mensaje</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo *</label>
+                                <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+                                <span class="error-msg" id="name-error">El nombre es requerido.</span>
+                            </div>
+                            
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="tu@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Ej: 647847065" required>
+                                    <span class="error-msg" id="phone-error">Un número de teléfono válido es requerido.</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="program-select">Programa de Interés</label>
+                                <select id="program-select" name="program">
+                                    <option value="Escuela de Adultos">Escuela de Adultos</option>
+                                    <option value="Escuela Infantil">Escuela Infantil (Niños)</option>
+                                    <option value="Clases Particulares">Clases Particulares</option>
+                                    <option value="Competicion">Grupo de Competición</option>
+                                    <option value="Otras Consultas">Otras consultas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Cuéntanos tu nivel, disponibilidad u otras consultas..." required></textarea>
+                                <span class="error-msg" id="message-error">El mensaje es requerido.</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form" aria-label="Enviar formulario de inscripción por WhatsApp">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje por WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info & Map -->
+                    <div class="contact-info-wrapper reveal-right">
+                        <div class="info-cards">
+                            <!-- Info Card 1 -->
+                            <a href="https://wa.me/34647847065?text=Hola!%20Quiero%20más%20información%20sobre%20las%20clases%20de%20pádel%20en%20FNS%20Padel%20Academy." class="info-card" target="_blank" rel="noopener noreferrer" aria-label="Abrir chat de WhatsApp con FNS Padel">
+                                <div class="info-icon icon-whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+                                <div class="info-text">
+                                    <h4>WhatsApp Directo</h4>
+                                    <p>647 847 065</p>
+                                    <span class="info-link">Escríbenos ahora mismo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </a>
+                            
+                            <!-- Info Card 2 -->
+                            <a href="https://www.instagram.com/fns_padelacademy/" class="info-card" target="_blank" rel="noopener noreferrer" aria-label="Ver el perfil de Instagram de FNS Padel">
+                                <div class="info-icon icon-instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></div>
+                                <div class="info-text">
+                                    <h4>Instagram</h4>
+                                    <p>@fns_padelacademy</p>
+                                    <span class="info-link">Ver nuestras publicaciones <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </a>
+                            
+                            <!-- Info Card 3 -->
+                            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd72f02963f8306f:0x38695632b1d545f?sa=X&ved=1t:8290&ictx=111" class="info-card" target="_blank" rel="noopener noreferrer" aria-label="Ver ubicación en Google Maps">
+                                <div class="info-icon icon-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                                <div class="info-text">
+                                    <h4>Dirección</h4>
+                                    <p>La Mirada Pádel, Ctra. Cártama a Campanillas (Santa Rosalía Maqueda), Málaga</p>
+                                    <span class="info-link">Cómo llegar en Google Maps <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Mini Map Embed Placeholder -->
+                        <div class="map-placeholder">
+                            <div class="map-overlay">
+                                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                                <h4>La Mirada Pádel en Campanillas</h4>
+                                <p>Ctra. de Cártama a Campanillas, Málaga</p>
+                                <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd72f02963f8306f:0x38695632b1d545f?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" id="btn-view-map" aria-label="Abrir mapa de Google Maps en pestaña nueva">
+                                    <i class="fa-solid fa-route"></i> Ver ruta en Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo-container" aria-label="FNS Padel Academy - Inicio">
+                    <img src="assets/logo.png" alt="FNS Padel Academy Logo" class="logo-img">
+                    <span class="logo-text">FNS <span class="accent-text">Padel</span></span>
+                </a>
+                <p class="footer-desc">
+                    Tu academia de confianza en Campanillas, Málaga. Pasión por el pádel, entrenamientos divertidos y competitivos.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/fns_padelacademy/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/34647847065?text=Hola!%20Quiero%20más%20información%20sobre%20las%20clases%20de%20pádel%20en%20FNS%20Padel%20Academy." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://playtomic.com/es/clubs/la-mirada-padel" target="_blank" rel="noopener noreferrer" aria-label="Reservar en Playtomic"><i class="fa-solid fa-calendar-days"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#instalaciones">Instalaciones</a></li>
+                    <li><a href="#testimonios">Opiniones</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-hours">
+                <h4>Horarios de Clase</h4>
+                <ul>
+                    <li><span>Lunes a Viernes:</span> <span>09:00 - 22:00</span></li>
+                    <li><span>Sábados:</span> <span>09:00 - 14:00</span></li>
+                    <li><span>Domingos:</span> <span>Cerrado (Consultar)</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 FNS Padel Academy. Todos los derechos reservados.</p>
+                <p>Ubicados en <a href="https://playtomic.com/es/clubs/la-mirada-padel" target="_blank" rel="noopener noreferrer">La Mirada Pádel</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/34647847065?text=Hola!%20Quiero%20más%20información%20sobre%20las%20clases%20de%20pádel%20en%20FNS%20Padel%20Academy." class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip-text">¿Hablamos? 🎾</span>
+    </a>
+
+    <!-- BACKGROUND AUDIO ELEMENT -->
+    <audio id="bg-music" src="assets/rocky.mp3" loop></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

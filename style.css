@@ -454,8 +454,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     line-height: 1.05;
+    width: fit-content;
 }
 
 .logo-text {
@@ -465,21 +466,26 @@ a {
     letter-spacing: -0.5px;
     text-transform: uppercase;
     border-bottom: 2px solid var(--accent);
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     margin-bottom: 3px;
-    display: inline-block;
+    display: block;
+    width: 100%;
+    text-align: center;
     transition: border-bottom-color var(--transition-normal);
 }
 
 .logo-subtext {
     font-family: var(--font-heading);
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 3.5px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     display: block;
+    width: 100%;
+    text-align: justify;
+    text-align-last: justify;
     line-height: 1;
+    letter-spacing: 0;
 }
 
 .accent-text {

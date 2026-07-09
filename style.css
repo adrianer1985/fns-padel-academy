@@ -476,14 +476,13 @@ a {
 
 .logo-subtext {
     font-family: var(--font-heading);
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--text-primary);
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    text-align: justify;
-    text-align-last: justify;
     line-height: 1;
     letter-spacing: 0;
 }

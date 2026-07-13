@@ -193,4 +193,50 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- PROMOTIONAL MODAL (VENTANA EMERGENTE) ---
+    const promoModal = document.getElementById('promo-modal');
+    const modalClose = document.getElementById('modal-close');
+
+    if (promoModal && modalClose) {
+        let autoCloseTimer;
+
+        const openPromoModal = () => {
+            promoModal.classList.add('active');
+            promoModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            // Auto close after 7 seconds
+            autoCloseTimer = setTimeout(() => {
+                closePromoModal();
+            }, 7000);
+        };
+
+        const closePromoModal = () => {
+            promoModal.classList.remove('active');
+            promoModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            clearTimeout(autoCloseTimer);
+        };
+
+        // Open modal after 800ms delay for smooth entrance
+        setTimeout(openPromoModal, 800);
+
+        // Close on button click
+        modalClose.addEventListener('click', closePromoModal);
+
+        // Close on overlay click
+        promoModal.addEventListener('click', (e) => {
+            if (e.target === promoModal) {
+                closePromoModal();
+            }
+        });
+
+        // Close on Esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && promoModal.classList.contains('active')) {
+                closePromoModal();
+            }
+        });
+    }
 });

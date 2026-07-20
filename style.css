@@ -2071,8 +2071,10 @@ textarea {
 
 .about-card-footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 14px;
     padding: 20px 24px;
     background-color: var(--bg-card);
 }

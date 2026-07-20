@@ -2036,7 +2036,7 @@ textarea {
     }
 }
 
-/* --- ABOUT SECTION CARD LAYOUT & FOOTER --- */
+/* --- ABOUT SECTION CARD LAYOUT & BANNER --- */
 .about-image-card {
     position: relative;
     border-radius: var(--radius-lg);
@@ -2044,8 +2044,6 @@ textarea {
     border: 1px solid var(--border-color);
     box-shadow: var(--glass-shadow);
     background-color: var(--bg-card);
-    display: flex;
-    flex-direction: column;
 }
 
 .about-img {
@@ -2057,8 +2055,14 @@ textarea {
 
 @media (min-width: 768px) {
     .about-img {
-        height: 420px;
+        height: 480px; /* Restored original height for perfect column balance */
     }
+}
+
+.about-flag-wrapper {
+    position: relative;
+    width: 100%;
+    display: block;
 }
 
 .about-flag-banner {
@@ -2066,47 +2070,32 @@ textarea {
     height: auto;
     display: block;
     border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
 }
 
-.about-card-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    padding: 20px 24px;
-    background-color: var(--bg-card);
-}
-
-.about-mini-flag {
-    height: 38px;
-    width: auto;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-.experience-badge-inline {
+.experience-badge-flag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     background-color: var(--accent);
     color: var(--bg-primary);
     padding: 10px 18px;
     border-radius: var(--radius-md);
-    box-shadow: 0 6px 20px rgba(204, 255, 0, 0.15);
+    box-shadow: 0 6px 20px rgba(204, 255, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    z-index: 2;
 }
 
-.experience-badge-inline .badge-years {
+.experience-badge-flag .badge-years {
     font-family: var(--font-heading);
     font-size: 1.4rem;
     font-weight: 800;
     line-height: 1;
 }
 
-.experience-badge-inline .badge-text {
+.experience-badge-flag .badge-text {
     font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2116,14 +2105,10 @@ textarea {
 @media (prefers-color-scheme: light) {
     .about-flag-banner {
         border-top-color: #e2e8f0;
-        border-bottom-color: #e2e8f0;
     }
-    .about-mini-flag {
-        border-color: #cbd5e1;
-    }
-    .experience-badge-inline {
+    .experience-badge-flag {
         background-color: #15803d;
         color: #ffffff;
-        box-shadow: 0 6px 20px rgba(21, 128, 61, 0.15);
+        box-shadow: 0 6px 20px rgba(21, 128, 61, 0.25);
     }
 }

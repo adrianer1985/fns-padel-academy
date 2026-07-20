@@ -2036,16 +2036,92 @@ textarea {
     }
 }
 
-/* --- ABOUT SECTION FLAG LOGO --- */
-.about-flag-logo {
+/* --- ABOUT SECTION CARD LAYOUT & FOOTER --- */
+.about-image-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--glass-shadow);
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+}
+
+.about-img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+@media (min-width: 768px) {
+    .about-img {
+        height: 420px;
+    }
+}
+
+.about-flag-banner {
     width: 100%;
     height: auto;
     display: block;
     border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background-color: var(--bg-card);
+}
+
+.about-mini-flag {
+    height: 38px;
+    width: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.experience-badge-inline {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 6px 20px rgba(204, 255, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.experience-badge-inline .badge-years {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.experience-badge-inline .badge-text {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 @media (prefers-color-scheme: light) {
-    .about-flag-logo {
+    .about-flag-banner {
         border-top-color: #e2e8f0;
+        border-bottom-color: #e2e8f0;
+    }
+    .about-mini-flag {
+        border-color: #cbd5e1;
+    }
+    .experience-badge-inline {
+        background-color: #15803d;
+        color: #ffffff;
+        box-shadow: 0 6px 20px rgba(21, 128, 61, 0.15);
     }
 }

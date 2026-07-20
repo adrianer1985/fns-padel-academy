@@ -622,7 +622,7 @@ a {
     padding-bottom: 80px;
     background-image: url('assets/WhatsApp Image 2026-07-14 at 18.12.31.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center top; /* Focus on the top area to prevent cutting heads off */
     display: flex;
     align-items: center;
     position: relative;

@@ -2074,13 +2074,13 @@ textarea {
 
 .experience-badge-flag {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 12px;
+    right: 12px;
     background-color: var(--accent);
     color: var(--bg-primary);
-    padding: 10px 18px;
-    border-radius: var(--radius-md);
-    box-shadow: 0 6px 20px rgba(204, 255, 0, 0.2);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 12px rgba(204, 255, 0, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2090,16 +2090,16 @@ textarea {
 
 .experience-badge-flag .badge-years {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     font-weight: 800;
     line-height: 1;
 }
 
 .experience-badge-flag .badge-text {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -2109,6 +2109,6 @@ textarea {
     .experience-badge-flag {
         background-color: #15803d;
         color: #ffffff;
-        box-shadow: 0 6px 20px rgba(21, 128, 61, 0.25);
+        box-shadow: 0 4px 12px rgba(21, 128, 61, 0.25);
     }
 }

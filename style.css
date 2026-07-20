@@ -779,6 +779,7 @@ a {
     width: 100%;
     height: 360px;
     object-fit: cover;
+    object-position: center top; /* Prevent cutting heads off */
 }
 
 @media (min-width: 768px) {
@@ -889,6 +890,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top; /* Ensure heads/faces aren't cut off */
     transition: var(--transition-normal);
 }
 

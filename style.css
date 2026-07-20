@@ -2035,3 +2035,22 @@ textarea {
         color: #15803d;
     }
 }
+
+/* --- ABOUT SECTION FLAG LOGO --- */
+.about-flag-logo {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    height: 48px;
+    width: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+@media (prefers-color-scheme: light) {
+    .about-flag-logo {
+        border-color: #cbd5e1;
+    }
+}

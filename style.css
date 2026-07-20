@@ -1830,3 +1830,198 @@ textarea {
         border-color: #15803d !important;
     }
 }
+
+/* --- PACKS SECTION --- */
+.packs {
+    background-color: var(--bg-secondary);
+    position: relative;
+}
+
+.pack-card {
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.pack-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-glow);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.pack-badge {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.pack-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(204, 255, 0, 0.08);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(204, 255, 0, 0.15);
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.05);
+}
+
+.pack-hours {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.hours-num {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.hours-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.pack-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-grow: 1;
+}
+
+.pack-features li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.pack-features li i {
+    color: var(--accent);
+    margin-top: 3px;
+    font-size: 1rem;
+}
+
+.pack-action {
+    width: 100%;
+}
+
+/* Featured Pack Style (FNS Pro) */
+.featured-pack {
+    background: linear-gradient(135deg, rgba(204, 255, 0, 0.03) 0%, rgba(7, 9, 14, 0.2) 100%);
+    border-color: rgba(204, 255, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(204, 255, 0, 0.05);
+}
+
+.featured-pack::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.featured-pack .pack-icon {
+    background: var(--accent-gradient);
+    color: var(--bg-primary);
+    border: none;
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Ribbons / Tags */
+.pack-tag-ribbon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    letter-spacing: 1px;
+}
+
+/* --- LIGHT MODE ADJUSTMENTS FOR PACKS --- */
+@media (prefers-color-scheme: light) {
+    .packs {
+        background-color: #f8fafc;
+    }
+    
+    .pack-card {
+        background-color: #ffffff;
+        border-color: #e2e8f0;
+        box-shadow: 0 4px 6px rgba(15, 23, 42, 0.03);
+    }
+    
+    .pack-card:hover {
+        border-color: #15803d;
+        box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+    }
+    
+    .pack-icon {
+        background: rgba(21, 128, 61, 0.08);
+        color: #15803d;
+        border-color: rgba(21, 128, 61, 0.15);
+        box-shadow: none;
+    }
+    
+    .hours-label {
+        color: #15803d;
+    }
+    
+    .featured-pack {
+        background: linear-gradient(135deg, rgba(21, 128, 61, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
+        border-color: rgba(21, 128, 61, 0.25);
+    }
+    
+    .featured-pack .pack-icon {
+        background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+        color: #ffffff;
+    }
+    
+    .featured-pack::before {
+        background: linear-gradient(90deg, #15803d, #166534);
+    }
+    
+    .pack-tag-ribbon {
+        background-color: #15803d;
+        color: #ffffff;
+    }
+    
+    .pack-features li i {
+        color: #15803d;
+    }
+}

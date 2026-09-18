@@ -162,6 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     greeting: 'Bonjour FNS Padel Academy ! 🎾',
                     intro: 'Je souhaiterais m’inscrire aux cours ou demander plus d’informations :',
                     name: 'Nom', phone: 'Téléphone', email: 'E-mail', program: 'Programme souhaité', message: 'Message'
+                },
+                da: {
+                    empty: 'Ikke angivet',
+                    greeting: 'Hej FNS Padel Academy! 🎾',
+                    intro: 'Jeg vil gerne tilmelde mig træningen eller have mere information:',
+                    name: 'Navn', phone: 'Telefon', email: 'E-mail', program: 'Ønsket program', message: 'Besked'
                 }
             }[currentLanguage];
             const email = emailInput.value.trim() || formCopy.empty;

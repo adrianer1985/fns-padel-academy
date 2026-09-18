@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://adrianer1985.github.io/fns-padel-academy/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://fnspadelacademy.com/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/fns-padel-academy-social.jpg</image:loc>
+      <image:loc>https://fnspadelacademy.com/assets/fns-padel-academy-social.jpg</image:loc>
       <image:title>FNS Padel Academy en Campanillas, Málaga</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/equipo-fns.webp</image:loc>
+      <image:loc>https://fnspadelacademy.com/assets/equipo-fns.webp</image:loc>
       <image:title>Equipo de FNS Padel Academy</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/escuela-infantil.webp</image:loc>
+      <image:loc>https://fnspadelacademy.com/assets/escuela-infantil.webp</image:loc>
       <image:title>Escuela infantil de pádel en Málaga</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/escuela-adultos-grupo.webp</image:loc>
+      <image:loc>https://fnspadelacademy.com/assets/escuela-adultos-grupo.webp</image:loc>
       <image:title>Grupo de alumnos de la Escuela de Adultos de FNS Padel Academy</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/clases-particulares.webp</image:loc>
+      <image:loc>https://fnspadelacademy.com/assets/clases-particulares.webp</image:loc>
       <image:title>Clases particulares de pádel en FNS Padel Academy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://adrianer1985.github.io/fns-padel-academy/?lang=en</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://fnspadelacademy.com/?lang=en</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adrianer1985.github.io/fns-padel-academy/?lang=fr</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://fnspadelacademy.com/?lang=fr</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adrianer1985.github.io/fns-padel-academy/?lang=da</loc>
-    <lastmod>2026-09-18</lastmod>
+    <loc>https://fnspadelacademy.com/?lang=da</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

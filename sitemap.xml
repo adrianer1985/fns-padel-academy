@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://adrianer1985.github.io/fns-padel-academy/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/fns-padel-academy-social.jpg</image:loc>
+      <image:title>FNS Padel Academy en Campanillas, Málaga</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/equipo-fns.webp</image:loc>
+      <image:title>Equipo de FNS Padel Academy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/escuela-infantil.webp</image:loc>
+      <image:title>Escuela infantil de pádel en Málaga</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/escuela-adultos.webp</image:loc>
+      <image:title>Clases de pádel para adultos en Campanillas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/clases-particulares.webp</image:loc>
+      <image:title>Clases particulares de pádel en FNS Padel Academy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/promo-packs-fns.webp</image:loc>
+      <image:title>Packs de entrenamiento FNS Padel Academy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/promo-pack-premium.webp</image:loc>
+      <image:title>Pack Premium de FNS Padel Academy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/promo-pack-medium.webp</image:loc>
+      <image:title>Pack Medium de FNS Padel Academy</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://adrianer1985.github.io/fns-padel-academy/assets/promo-pack-basic.webp</image:loc>
+      <image:title>Pack Basic de FNS Padel Academy</image:title>
+    </image:image>
+  </url>
+</urlset>

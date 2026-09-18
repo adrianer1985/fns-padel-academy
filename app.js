@@ -194,49 +194,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- PROMOTIONAL MODAL (VENTANA EMERGENTE) ---
-    const promoModal = document.getElementById('promo-modal');
-    const modalClose = document.getElementById('modal-close');
+    // --- PROMOTIONAL PACK COLLAGE ---
+    const promoCollage = document.getElementById('promo-collage');
+    const promoClose = document.getElementById('promo-close');
 
-    if (promoModal && modalClose) {
-        let autoCloseTimer;
+    if (promoCollage && promoClose) {
+        let promoCloseTimer;
 
-        const openPromoModal = () => {
-            promoModal.classList.add('active');
-            promoModal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-
-            // Auto close after 7 seconds
-            autoCloseTimer = setTimeout(() => {
-                closePromoModal();
-            }, 7000);
-        };
-
-        const closePromoModal = () => {
-            promoModal.classList.remove('active');
-            promoModal.setAttribute('aria-hidden', 'true');
+        const closePromoCollage = () => {
+            promoCollage.classList.remove('active');
+            promoCollage.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
-            clearTimeout(autoCloseTimer);
+            clearTimeout(promoCloseTimer);
         };
 
-        // Open modal after 800ms delay for smooth entrance
-        setTimeout(openPromoModal, 800);
+        const openPromoCollage = () => {
+            promoCollage.classList.add('active');
+            promoCollage.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            promoCloseTimer = setTimeout(closePromoCollage, 5000);
+        };
 
-        // Close on button click
-        modalClose.addEventListener('click', closePromoModal);
+        setTimeout(openPromoCollage, 800);
+        promoClose.addEventListener('click', closePromoCollage);
 
-        // Close on overlay click
-        promoModal.addEventListener('click', (e) => {
-            if (e.target === promoModal) {
-                closePromoModal();
-            }
+        promoCollage.addEventListener('click', (event) => {
+            if (event.target === promoCollage) closePromoCollage();
         });
 
-        // Close on Esc key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && promoModal.classList.contains('active')) {
-                closePromoModal();
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && promoCollage.classList.contains('active')) {
+                closePromoCollage();
             }
         });
     }
+
 });

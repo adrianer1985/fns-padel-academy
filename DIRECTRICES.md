@@ -74,8 +74,9 @@ Este documento recoge todas las **directrices, decisiones de diseño, especifica
 * **Botones:** "Ver Programas" y "Prueba una Clase Gratis".
 
 ### 3. Pop-up / Modal Promocional
-* **Comportamiento:** Se abre automáticamente a los 800ms de entrar en la web y se cierra solo a los 7 segundos o al hacer clic en la "X" / fuera del cartel.
-* **Contenido:** Cartel promocional del Campamento / Evento de la academia (`assets/summer-camp.jpg`).
+* **Estado actual:** El antiguo cartel individual del campamento se ha retirado.
+* **Versión actual:** Collage 2 × 2 con los carteles general, Premium, Medium y Basic. Aparece automáticamente a los 800 ms, permanece visible durante 5 segundos y permite cierre manual, clic fuera del cartel o tecla Escape.
+* **Archivos optimizados:** `promo-packs-fns.webp`, `promo-pack-premium.webp`, `promo-pack-medium.webp` y `promo-pack-basic.webp`.
 
 ### 4. Sobre Nosotros (¿Quiénes Somos?)
 * **Título:** `Pasión, Técnica y un Ambiente Familiar Único`.
@@ -120,3 +121,15 @@ Este documento recoge todas las **directrices, decisiones de diseño, especifica
 * **Alojamiento:** GitHub Pages (Despliegue automático en la rama `main`).
 * **URL de Producción:** [https://adrianer1985.github.io/fns-padel-academy/](https://adrianer1985.github.io/fns-padel-academy/)
 * **Repositorio:** [https://github.com/adrianer1985/fns-padel-academy](https://github.com/adrianer1985/fns-padel-academy)
+* **Dominio previsto:** `fnspadelacademy.com` (sin guion) se usará cuando esté comprado, conectado y accesible. Hasta entonces, las etiquetas canónicas, el sitemap y los metadatos sociales deben apuntar a la URL activa de GitHub Pages.
+
+---
+
+## 🔎 7. Revisión SEO — 18/09/2026
+
+* Añadidos `robots.txt` y `sitemap.xml`, incluyendo las imágenes principales.
+* Corregida temporalmente la URL canónica para que apunte a la web realmente publicada.
+* Open Graph y Twitter Cards usan una imagen social de 1200 × 630 px y URLs absolutas.
+* Datos estructurados actualizados con la dirección confirmada: Travesía Santa Rosalía Maqueda, s/n, 29591 Málaga.
+* Imágenes principales convertidas a WebP y redimensionadas, manteniendo los originales como respaldo.
+* Añadidas dimensiones explícitas y carga diferida a las imágenes secundarias para mejorar estabilidad y velocidad.

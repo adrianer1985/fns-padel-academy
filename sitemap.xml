@@ -27,4 +27,16 @@
       <image:title>Clases particulares de pádel en FNS Padel Academy</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://adrianer1985.github.io/fns-padel-academy/?lang=en</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adrianer1985.github.io/fns-padel-academy/?lang=fr</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -194,103 +194,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- PROMOTIONAL PACK COLLAGE ---
-    const promoCollage = document.getElementById('promo-collage');
-    const promoClose = document.getElementById('promo-close');
+    // --- WELCOME MESSAGE ---
+    const welcomeMessage = document.getElementById('welcome-message');
+    const welcomeClose = document.getElementById('welcome-close');
+    const welcomeLink = document.querySelector('.welcome-link');
 
-    if (promoCollage && promoClose) {
-        const promoItems = promoCollage.querySelectorAll('.promo-item');
-        const promoGrid = promoCollage.querySelector('.promo-grid');
-        const promoTimerBar = promoCollage.querySelector('.promo-timer span');
-        const promoInstruction = promoCollage.querySelector('.promo-instruction');
-        const promoDuration = 5000;
-        let promoCloseTimer;
-        let promoTimerStartedAt = 0;
-        let promoRemainingTime = promoDuration;
-        let expandedPromoItem = null;
+    if (welcomeMessage && welcomeClose) {
+        let welcomeTimer;
 
-        const resetExpandedPromo = () => {
-            if (expandedPromoItem) {
-                expandedPromoItem.classList.remove('expanded');
-                expandedPromoItem.setAttribute('aria-pressed', 'false');
-            }
-            expandedPromoItem = null;
-            promoGrid?.classList.remove('has-expanded');
-            promoCollage.classList.remove('is-paused');
-            if (promoInstruction) promoInstruction.textContent = 'Toca un cartel para ampliarlo';
-        };
-
-        const closePromoCollage = () => {
-            promoCollage.classList.remove('active');
-            promoCollage.setAttribute('aria-hidden', 'true');
+        const closeWelcomeMessage = () => {
+            welcomeMessage.classList.remove('active');
+            welcomeMessage.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
-            clearTimeout(promoCloseTimer);
-            resetExpandedPromo();
+            clearTimeout(welcomeTimer);
         };
 
-        const resumePromoTimer = () => {
-            promoCollage.classList.remove('is-paused');
-            promoTimerStartedAt = performance.now();
-            promoCloseTimer = setTimeout(closePromoCollage, promoRemainingTime);
-        };
-
-        const pausePromoTimer = () => {
-            promoRemainingTime = Math.max(0, promoRemainingTime - (performance.now() - promoTimerStartedAt));
-            clearTimeout(promoCloseTimer);
-            promoCollage.classList.add('is-paused');
-        };
-
-        const openPromoCollage = () => {
-            promoRemainingTime = promoDuration;
-            promoCollage.classList.add('active');
-            promoCollage.setAttribute('aria-hidden', 'false');
+        const openWelcomeMessage = () => {
+            welcomeMessage.classList.add('active');
+            welcomeMessage.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
-            if (promoTimerBar) {
-                promoTimerBar.style.animation = 'none';
-                void promoTimerBar.offsetWidth;
-                promoTimerBar.style.animation = `promo-countdown ${promoDuration}ms linear forwards`;
-            }
-            resumePromoTimer();
+            welcomeTimer = setTimeout(closeWelcomeMessage, 3000);
         };
 
-        setTimeout(openPromoCollage, 800);
-        promoClose.addEventListener('click', closePromoCollage);
+        setTimeout(openWelcomeMessage, 500);
+        welcomeClose.addEventListener('click', closeWelcomeMessage);
+        welcomeLink?.addEventListener('click', closeWelcomeMessage);
 
-        promoCollage.addEventListener('click', (event) => {
-            if (event.target === promoCollage) closePromoCollage();
-        });
-
-        promoItems.forEach(item => {
-            item.addEventListener('click', () => {
-                if (expandedPromoItem === item) {
-                    resetExpandedPromo();
-                    resumePromoTimer();
-                    return;
-                }
-
-                if (expandedPromoItem) {
-                    expandedPromoItem.classList.remove('expanded');
-                    expandedPromoItem.setAttribute('aria-pressed', 'false');
-                } else {
-                    pausePromoTimer();
-                }
-
-                expandedPromoItem = item;
-                item.classList.add('expanded');
-                item.setAttribute('aria-pressed', 'true');
-                promoGrid?.classList.add('has-expanded');
-                if (promoInstruction) promoInstruction.textContent = 'Toca de nuevo para volver al collage';
-            });
+        welcomeMessage.addEventListener('click', (event) => {
+            if (event.target === welcomeMessage) closeWelcomeMessage();
         });
 
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && promoCollage.classList.contains('active')) {
-                if (expandedPromoItem) {
-                    resetExpandedPromo();
-                    resumePromoTimer();
-                } else {
-                    closePromoCollage();
-                }
+            if (event.key === 'Escape' && welcomeMessage.classList.contains('active')) {
+                closeWelcomeMessage();
             }
         });
     }

@@ -1,0 +1,418 @@
+/**
+ * FNS Padel Academy — client-side internationalisation.
+ * Spanish remains the default; English and French are available through ?lang=.
+ */
+(function () {
+    'use strict';
+
+    const supported = ['es', 'en', 'fr'];
+    const requested = new URLSearchParams(window.location.search).get('lang');
+    const language = supported.includes(requested) ? requested : 'es';
+
+    const translations = {
+        en: {
+            'Inicio': 'Home',
+            'Sobre Nosotros': 'About Us',
+            'Programas': 'Programs',
+            'Instalaciones': 'Facilities',
+            'Opiniones': 'Reviews',
+            'Contacto': 'Contact',
+            'Reservar Pista': 'Book a Court',
+            'Academia de Pádel de Alto Rendimiento para Menores y Adultos': 'High-Performance Padel Academy for Juniors and Adults',
+            'Eleva tu Pádel al': 'Take Your Padel to the',
+            'Siguiente Nivel': 'Next Level',
+            'Entrena en': 'Train at',
+            ', con base en el club': ', based at',
+            '(Campanillas, Málaga). Formación de calidad, ambiente familiar y diversión garantizada para todas las edades.': '(Campanillas, Malaga). Quality coaching, a friendly atmosphere and guaranteed fun for all ages.',
+            'Prueba tu primera clase': 'Try Your First Class',
+            'Alquilar Pista': 'Hire a Court',
+            'Pistas de Cristal': 'Glass Courts',
+            'Alumnos Activos': 'Active Players',
+            'Valoración Google': 'Google Rating',
+            'Años de Exp.': 'Years of Experience',
+            '¿Quiénes Somos?': 'Who We Are',
+            'Pasión, Técnica y un Ambiente Familiar Único': 'Passion, Technique and a Unique Family Atmosphere',
+            'En': 'At',
+            'no solo formamos jugadores de pádel; creamos una comunidad. Liderados por': 'we do more than coach padel players; we build a community. Led by',
+            '(gerente del club y director de la FNS Padel Academy) y': '(club manager and director of FNS Padel Academy) and',
+            '(directora general del club), nuestra escuela destaca por el trato humano, la dedicación y el entusiasmo en cada entrenamiento.': '(general director of the club), our academy stands out for its personal approach, dedication and enthusiasm in every training session.',
+            'Creemos que el pádel se aprende mejor en un entorno donde te sientas como en casa. Por eso, tanto si estás empezando desde cero como si buscas competir al más alto nivel, en nuestras instalaciones de La Mirada Pádel encontrarás el espacio ideal.': 'We believe padel is best learned in a place where you feel at home. Whether you are starting from scratch or aiming to compete at the highest level, you will find the ideal environment at our La Mirada Padel facilities.',
+            'Trato Cercano y Familiar': 'Friendly, Personal Approach',
+            'Nuestra mayor prioridad es la socialización y el ambiente de club.': 'Our priority is a welcoming club atmosphere and a strong social community.',
+            'Metodología Adaptativa': 'Adaptive Methodology',
+            'Entrenamientos diseñados específicamente para tu nivel físico y técnico.': 'Training designed specifically for your physical and technical level.',
+            'Eventos y Pulls Sociales': 'Social Events and Mix-ins',
+            'Actividades los fines de semana, barbacoas y torneos internos.': 'Weekend activities, barbecues and in-house tournaments.',
+            'Competiciones por Equipos': 'Team Competitions',
+            '+10 equipos en competiciones amateurs como Series Nacionales de Pádel y Liga Lapi, entre otras.': 'More than 10 teams in amateur competitions including the National Padel Series and Liga Lapi.',
+            'Nuestros Servicios': 'Our Services',
+            'Programas para Todos los Niveles': 'Programs for Every Level',
+            'Sea cual sea tu objetivo, tenemos un grupo y un formato de entrenamiento perfecto para ti.': 'Whatever your goal, we have the right group and training format for you.',
+            'Infantil': 'Juniors',
+            'Escuela Infantil (4-15 años)': 'Junior Academy (ages 4–15)',
+            'Diseñado para que los más pequeños aprendan los fundamentos del pádel, psicomotricidad y valores deportivos en un ambiente lleno de diversión.': 'Designed for children to learn padel fundamentals, motor skills and sporting values in a fun environment.',
+            'Grupos reducidos por edades': 'Small age-based groups',
+            'Juegos de coordinación': 'Coordination games',
+            'Material adaptado': 'Age-appropriate equipment',
+            'Más Información': 'More Information',
+            'Más Popular': 'Most Popular',
+            'Escuela de Adultos': 'Adult Academy',
+            'Desde iniciación absoluta hasta perfeccionamiento táctico. Aprende la técnica de golpeo, posicionamiento en pista y estrategias para ganar tus partidos.': 'From complete beginners to advanced tactical development. Learn stroke technique, court positioning and strategies to win your matches.',
+            'Iniciación, Medio y Avanzado': 'Beginner, Intermediate and Advanced',
+            'Clases de 1h, opción de 1 o 2 a la semana.': 'One-hour lessons, once or twice a week.',
+            'Partidos organizados': 'Organised matches',
+            'Reservar Plaza': 'Reserve a Place',
+            'Personalizado': 'Personalised',
+            'Particulares y Competición': 'Private Coaching and Competition',
+            'Clases individuales (1 alumno) o en pareja (2 alumnos) para una corrección técnica acelerada. O únete a los grupos de competición para preparar torneos.': 'Individual or two-player lessons for faster technical improvement, plus competition groups for tournament preparation.',
+            'Atención 100% personalizada': '100% personalised coaching',
+            'Preparación física específica': 'Specific physical preparation',
+            'Flexibilidad de horarios': 'Flexible schedules',
+            'Consultar Tarifas': 'Check Prices',
+            'Nuestros Planes': 'Our Plans',
+            'Packs FNS de Alto Rendimiento': 'FNS High-Performance Packs',
+            'Combina entrenamientos grupales y particulares para maximizar tu nivel de juego. Diseñados para exprimir tu potencial semana a semana.': 'Combine group and private sessions to maximise your game. Designed to unlock your potential week after week.',
+            'Semanales': 'Per Week',
+            'semanal': 'per week',
+            'a la semana': 'per week',
+            '1h Clase Particular': '1h Private Lesson',
+            '1h Clase Grupal': '1h Group Lesson',
+            '2h Particulares': '2h Private Lessons',
+            '2h Grupales': '2h Group Lessons',
+            'Perfeccionamiento técnico individual': 'Individual technical development',
+            'Opción ideal para corrección acelerada': 'Ideal for faster improvement',
+            'Entrenamiento técnico-táctico': 'Technical and tactical training',
+            'Preparación activa para partidos y torneos': 'Active preparation for matches and tournaments',
+            'Máxima intensidad y volumen de juego': 'Maximum intensity and playing volume',
+            'Preparación física, torneos y SNP/Lapi': 'Fitness, tournaments and SNP/Lapi',
+            'Solicitar Información': 'Request Information',
+            'Más Vendido': 'Bestseller',
+            'Máximo Rendimiento': 'Maximum Performance',
+            'El Club': 'The Club',
+            'Nuestra Sede: La Mirada Pádel': 'Our Home: La Mirada Padel',
+            'Disfruta del pádel en un entorno natural inmejorable. Un club accesible, familiar y totalmente equipado a solo unos minutos de Málaga capital.': 'Enjoy padel in an outstanding natural setting. An accessible, friendly and fully equipped club just minutes from Malaga city centre.',
+            '7 Pistas': '7 Courts',
+            'De cristal con césped de calidad para un bote óptimo y seguro.': 'Glass courts with quality turf for a consistent and safe bounce.',
+            'Parking Fácil': 'Easy Parking',
+            'Aparcamiento gratuito y cómodo para todos los alumnos del club.': 'Convenient free parking for all academy players.',
+            'Cafetería y Terraza': 'Café and Terrace',
+            'El punto de reunión perfecto para comentar el partido y socializar.': 'The perfect place to relax, talk about the match and socialise.',
+            'Vestuarios': 'Changing Rooms',
+            'Instalaciones totalmente equipadas a tu entera disposición.': 'Fully equipped facilities available for your convenience.',
+            'Reservar en Playtomic': 'Book on Playtomic',
+            'Desarrollamos todos nuestros entrenamientos en las instalaciones de': 'All our training sessions take place at',
+            ', un club de referencia en la zona de Campanillas (Málaga). Un espacio diseñado para disfrutar del deporte al aire libre y con todas las comodidades.': ', a leading club in the Campanillas area of Malaga, designed for enjoying outdoor sport with every convenience.',
+            'Testimonios': 'Testimonials',
+            'Lo que dicen nuestros alumnos': 'What Our Players Say',
+            'La opinión de nuestra comunidad de La Mirada Pádel es nuestro mayor orgullo.': 'The feedback from our La Mirada Padel community is our greatest source of pride.',
+            'Alumno Escuela Adultos': 'Adult Academy Player',
+            'Madre de alumnos': 'Parent of Players',
+            'Jugador habitual': 'Regular Player',
+            'Opinión de Google': 'Google Review',
+            '"Increíble ambiente. Funes y Raquel te hacen sentir como en casa desde el primer minuto. Las clases con Funes han mejorado mi juego una barbaridad. La pull de los viernes es imperdible!"': '“An amazing atmosphere. Funes and Raquel make you feel at home from the first minute. My game has improved enormously and the Friday mix-in is unmissable!”',
+            '"Un club con un trato súper cercano y muy familiar. La escuela de pádel es fantástica tanto para adultos como para niños. Los monitores tienen muchísima paciencia y adaptan los entrenos a tu nivel."': '“A very friendly, family-oriented club. The academy is fantastic for both adults and children. The coaches are patient and adapt every session to your level.”',
+            '"El mejor sitio en Campanillas para jugar al pádel y pasar un buen rato. Hay muy buen rollo entre los jugadores y organizan eventos geniales. ¡Muy recomendado!"': '“The best place in Campanillas to play padel and have a great time. There is a wonderful atmosphere among the players and they organise excellent events. Highly recommended!”',
+            'Ver opiniones en Google': 'View Reviews on Google',
+            'Resolvemos tus dudas': 'Your Questions Answered',
+            'Preguntas frecuentes sobre nuestras clases de pádel': 'Frequently Asked Questions About Our Padel Lessons',
+            'Todo lo que necesitas saber antes de empezar a entrenar en FNS Padel Academy, en Campanillas (Málaga).': 'Everything you need to know before training at FNS Padel Academy in Campanillas, Malaga.',
+            '¿Dónde está FNS Padel Academy?': 'Where is FNS Padel Academy?',
+            '¿Hay clases de pádel para niños y adultos?': 'Do you offer padel lessons for children and adults?',
+            '¿Necesito experiencia previa para apuntarme?': 'Do I need previous experience?',
+            '¿Se pueden reservar clases particulares de pádel?': 'Can I book private padel lessons?',
+            '¿Cómo puedo solicitar una clase de prueba?': 'How can I request a trial lesson?',
+            '¿Cuál es el horario de la academia?': 'What are the academy opening hours?',
+            'Sí. Contamos con escuela infantil de 4 a 15 años, escuela de adultos y entrenamientos particulares o de competición. Consulta todos nuestros': 'Yes. We offer a junior academy for ages 4–15, an adult academy and private or competition training. See all our',
+            'programas de pádel': 'padel programs',
+            'Entrenamos en el club': 'We train at',
+            ', en Travesía Santa Rosalía Maqueda, s/n, 29591 Málaga, en la zona de Campanillas. Puedes consultar la': ', at Travesía Santa Rosalía Maqueda, s/n, 29591 Malaga, in the Campanillas area. You can check the',
+            'ubicación y las instalaciones': 'location and facilities',
+            'antes de venir.': 'before your visit.',
+            'No. Tenemos grupos para iniciación, nivel medio y avanzado. Adaptamos el entrenamiento al nivel físico, técnico y a los objetivos de cada alumno.': 'No. We have beginner, intermediate and advanced groups, adapting training to each player’s fitness, technique and goals.',
+            'Sí. Ofrecemos clases individuales o en pareja, además de grupos de competición y packs que combinan clases particulares y grupales.': 'Yes. We offer individual and two-player lessons, competition groups and packs combining private and group sessions.',
+            'Puedes solicitar información o tu primera clase de prueba por WhatsApp en el': 'You can request information or your first trial lesson via WhatsApp on',
+            'o mediante el': 'or through the',
+            'formulario de contacto': 'contact form',
+            'El horario general es de lunes a viernes de 09:00 a 22:00 y los sábados de 09:00 a 14:00. Para confirmar la disponibilidad de una clase concreta, consúltanos por WhatsApp.': 'General hours are Monday to Friday from 09:00 to 22:00 and Saturdays from 09:00 to 14:00. Please check specific lesson availability on WhatsApp.',
+            'Contacto': 'Contact',
+            '¡Únete a la Academia!': 'Join the Academy!',
+            'Ponte en contacto con nosotros para resolver tus dudas o probar tu primera clase.': 'Contact us with any questions or to try your first lesson.',
+            'Envíanos un mensaje': 'Send Us a Message',
+            'Nombre Completo *': 'Full Name *',
+            'Correo Electrónico': 'Email',
+            'Teléfono / WhatsApp *': 'Phone / WhatsApp *',
+            'Programa de Interés': 'Program of Interest',
+            'Escuela Infantil': 'Junior Academy',
+            'Escuela Infantil (Niños)': 'Junior Academy (Children)',
+            'Clases Particulares': 'Private Lessons',
+            'Grupo de Competición': 'Competition Group',
+            'Otras consultas': 'Other Enquiries',
+            'Mensaje *': 'Message *',
+            'Enviar Mensaje por WhatsApp': 'Send Message via WhatsApp',
+            'Escribe tu nombre': 'Enter your name',
+            'Ej: 647847065': 'e.g. 647847065',
+            'Cuéntanos tu nivel, disponibilidad u otras consultas...': 'Tell us your level, availability or any questions...',
+            'El nombre es requerido.': 'Your name is required.',
+            'Un número de teléfono válido es requerido.': 'A valid phone number is required.',
+            'El mensaje es requerido.': 'A message is required.',
+            'WhatsApp Directo': 'WhatsApp Us',
+            'Escríbenos ahora mismo': 'Message us now',
+            'Ver nuestras publicaciones': 'See our posts',
+            'Dirección': 'Address',
+            'Cómo llegar en Google Maps': 'Directions on Google Maps',
+            'Ver ruta en Google Maps': 'Get Directions on Google Maps',
+            'Tu academia de confianza en Campanillas, Málaga. Pasión por el pádel, entrenamientos divertidos y competitivos.': 'Your trusted academy in Campanillas, Malaga. Passion for padel with fun and competitive training.',
+            'Enlaces Rápidos': 'Quick Links',
+            'Preguntas frecuentes': 'Frequently Asked Questions',
+            'Horarios de Clase': 'Class Times',
+            'Lunes a Viernes:': 'Monday to Friday:',
+            'Sábados:': 'Saturdays:',
+            'Domingos:': 'Sundays:',
+            'Cerrado (Consultar)': 'Closed (please enquire)',
+            'Todos los derechos reservados.': 'All rights reserved.',
+            '© 2026 FNS Padel Academy. Todos los derechos reservados.': '© 2026 FNS Padel Academy. All rights reserved.',
+            'Ubicados en': 'Based at',
+            '¿Hablamos? 🎾': 'Let’s Talk! 🎾',
+            '¿Quieres ser uno de nuestros leoncitos?': 'Would you like to become one of our Lion Cubs?',
+            'Solicita más información': 'Request More Information'
+        },
+        fr: {
+            'Inicio': 'Accueil',
+            'Sobre Nosotros': 'À propos',
+            'Programas': 'Programmes',
+            'Instalaciones': 'Installations',
+            'Opiniones': 'Avis',
+            'Contacto': 'Contact',
+            'Reservar Pista': 'Réserver un court',
+            'Academia de Pádel de Alto Rendimiento para Menores y Adultos': 'Académie de padel haute performance pour jeunes et adultes',
+            'Eleva tu Pádel al': 'Faites passer votre padel au',
+            'Siguiente Nivel': 'Niveau Supérieur',
+            'Entrena en': 'Entraînez-vous à',
+            ', con base en el club': ', au sein du club',
+            '(Campanillas, Málaga). Formación de calidad, ambiente familiar y diversión garantizada para todas las edades.': '(Campanillas, Málaga). Un enseignement de qualité, une ambiance familiale et du plaisir pour tous les âges.',
+            'Prueba tu primera clase': 'Essayez votre premier cours',
+            'Alquilar Pista': 'Louer un court',
+            'Pistas de Cristal': 'Courts vitrés',
+            'Alumnos Activos': 'Élèves actifs',
+            'Valoración Google': 'Note Google',
+            'Años de Exp.': "Ans d'expérience",
+            '¿Quiénes Somos?': 'Qui sommes-nous ?',
+            'Pasión, Técnica y un Ambiente Familiar Único': 'Passion, technique et ambiance familiale unique',
+            'En': 'À',
+            'no solo formamos jugadores de pádel; creamos una comunidad. Liderados por': 'nous ne formons pas seulement des joueurs de padel : nous créons une communauté. Dirigée par',
+            '(gerente del club y director de la FNS Padel Academy) y': '(gérant du club et directeur de FNS Padel Academy) et',
+            '(directora general del club), nuestra escuela destaca por el trato humano, la dedicación y el entusiasmo en cada entrenamiento.': '(directrice générale du club), notre académie se distingue par son approche humaine, son engagement et son enthousiasme à chaque entraînement.',
+            'Creemos que el pádel se aprende mejor en un entorno donde te sientas como en casa. Por eso, tanto si estás empezando desde cero como si buscas competir al más alto nivel, en nuestras instalaciones de La Mirada Pádel encontrarás el espacio ideal.': "Nous pensons que le padel s'apprend mieux dans un environnement où l'on se sent chez soi. Débutant ou compétiteur, vous trouverez le cadre idéal dans nos installations de La Mirada Pádel.",
+            'Trato Cercano y Familiar': 'Accueil proche et familial',
+            'Nuestra mayor prioridad es la socialización y el ambiente de club.': "Notre priorité est la convivialité et l'ambiance du club.",
+            'Metodología Adaptativa': 'Méthode adaptée',
+            'Entrenamientos diseñados específicamente para tu nivel físico y técnico.': 'Entraînements conçus selon votre niveau physique et technique.',
+            'Eventos y Pulls Sociales': 'Événements et rencontres',
+            'Actividades los fines de semana, barbacoas y torneos internos.': 'Activités le week-end, barbecues et tournois internes.',
+            'Competiciones por Equipos': 'Compétitions par équipes',
+            '+10 equipos en competiciones amateurs como Series Nacionales de Pádel y Liga Lapi, entre otras.': 'Plus de 10 équipes dans des compétitions amateurs comme les Series Nacionales de Pádel et la Liga Lapi.',
+            'Nuestros Servicios': 'Nos services',
+            'Programas para Todos los Niveles': 'Programmes pour tous les niveaux',
+            'Sea cual sea tu objetivo, tenemos un grupo y un formato de entrenamiento perfecto para ti.': "Quel que soit votre objectif, nous avons le groupe et la formule d'entraînement adaptés.",
+            'Infantil': 'Jeunes',
+            'Escuela Infantil (4-15 años)': 'École jeunes (4–15 ans)',
+            'Diseñado para que los más pequeños aprendan los fundamentos del pádel, psicomotricidad y valores deportivos en un ambiente lleno de diversión.': 'Un programme ludique pour apprendre les bases du padel, la motricité et les valeurs sportives.',
+            'Grupos reducidos por edades': "Petits groupes par âge",
+            'Juegos de coordinación': 'Jeux de coordination',
+            'Material adaptado': 'Matériel adapté',
+            'Más Información': "Plus d'informations",
+            'Más Popular': 'Le plus populaire',
+            'Escuela de Adultos': 'École adultes',
+            'Desde iniciación absoluta hasta perfeccionamiento táctico. Aprende la técnica de golpeo, posicionamiento en pista y estrategias para ganar tus partidos.': 'Du débutant au perfectionnement tactique : technique de frappe, placement et stratégies pour gagner vos matchs.',
+            'Iniciación, Medio y Avanzado': 'Débutant, intermédiaire et avancé',
+            'Clases de 1h, opción de 1 o 2 a la semana.': "Cours d'une heure, une ou deux fois par semaine.",
+            'Partidos organizados': 'Matchs organisés',
+            'Reservar Plaza': 'Réserver une place',
+            'Personalizado': 'Personnalisé',
+            'Particulares y Competición': 'Cours particuliers et compétition',
+            'Clases individuales (1 alumno) o en pareja (2 alumnos) para una corrección técnica acelerada. O únete a los grupos de competición para preparar torneos.': 'Cours individuels ou à deux pour progresser rapidement, et groupes de compétition pour préparer les tournois.',
+            'Atención 100% personalizada': 'Suivi 100 % personnalisé',
+            'Preparación física específica': 'Préparation physique spécifique',
+            'Flexibilidad de horarios': 'Horaires flexibles',
+            'Consultar Tarifas': 'Consulter les tarifs',
+            'Nuestros Planes': 'Nos formules',
+            'Packs FNS de Alto Rendimiento': 'Packs FNS haute performance',
+            'Combina entrenamientos grupales y particulares para maximizar tu nivel de juego. Diseñados para exprimir tu potencial semana a semana.': 'Combinez entraînements collectifs et particuliers pour développer votre jeu semaine après semaine.',
+            'Semanales': 'Par semaine',
+            'semanal': 'par semaine',
+            'a la semana': 'par semaine',
+            '1h Clase Particular': '1 h de cours particulier',
+            '1h Clase Grupal': '1 h de cours collectif',
+            '2h Particulares': '2 h de cours particuliers',
+            '2h Grupales': '2 h de cours collectifs',
+            'Perfeccionamiento técnico individual': 'Perfectionnement technique individuel',
+            'Opción ideal para corrección acelerada': 'Idéal pour progresser rapidement',
+            'Entrenamiento técnico-táctico': 'Entraînement technico-tactique',
+            'Preparación activa para partidos y torneos': 'Préparation aux matchs et tournois',
+            'Máxima intensidad y volumen de juego': 'Intensité et volume de jeu maximum',
+            'Preparación física, torneos y SNP/Lapi': 'Préparation physique, tournois et SNP/Lapi',
+            'Solicitar Información': "Demander des informations",
+            'Más Vendido': 'Meilleure vente',
+            'Máximo Rendimiento': 'Performance maximale',
+            'El Club': 'Le club',
+            'Nuestra Sede: La Mirada Pádel': 'Notre club : La Mirada Pádel',
+            'Disfruta del pádel en un entorno natural inmejorable. Un club accesible, familiar y totalmente equipado a solo unos minutos de Málaga capital.': 'Profitez du padel dans un cadre naturel exceptionnel, convivial, accessible et entièrement équipé, à quelques minutes de Málaga.',
+            '7 Pistas': '7 courts',
+            'De cristal con césped de calidad para un bote óptimo y seguro.': 'Courts vitrés avec gazon de qualité pour un rebond régulier et sûr.',
+            'Parking Fácil': 'Parking facile',
+            'Aparcamiento gratuito y cómodo para todos los alumnos del club.': 'Parking gratuit et pratique pour tous les élèves.',
+            'Cafetería y Terraza': 'Cafétéria et terrasse',
+            'El punto de reunión perfecto para comentar el partido y socializar.': 'Le lieu idéal pour se retrouver après le match.',
+            'Vestuarios': 'Vestiaires',
+            'Instalaciones totalmente equipadas a tu entera disposición.': 'Des installations entièrement équipées à votre disposition.',
+            'Reservar en Playtomic': 'Réserver sur Playtomic',
+            'Desarrollamos todos nuestros entrenamientos en las instalaciones de': 'Tous nos entraînements ont lieu dans les installations de',
+            ', un club de referencia en la zona de Campanillas (Málaga). Un espacio diseñado para disfrutar del deporte al aire libre y con todas las comodidades.': ', un club de référence à Campanillas (Málaga), conçu pour profiter du sport en plein air avec tout le confort nécessaire.',
+            'Testimonios': 'Témoignages',
+            'Lo que dicen nuestros alumnos': 'Ce que disent nos élèves',
+            'La opinión de nuestra comunidad de La Mirada Pádel es nuestro mayor orgullo.': 'Les avis de notre communauté de La Mirada Pádel sont notre plus grande fierté.',
+            'Alumno Escuela Adultos': 'Élève école adultes',
+            'Madre de alumnos': "Mère d'élèves",
+            'Jugador habitual': 'Joueur régulier',
+            'Opinión de Google': 'Avis Google',
+            '"Increíble ambiente. Funes y Raquel te hacen sentir como en casa desde el primer minuto. Las clases con Funes han mejorado mi juego una barbaridad. La pull de los viernes es imperdible!"': '« Une ambiance incroyable. Funes et Raquel vous font sentir chez vous dès la première minute. Mon jeu s’est énormément amélioré et la rencontre du vendredi est incontournable ! »',
+            '"Un club con un trato súper cercano y muy familiar. La escuela de pádel es fantástica tanto para adultos como para niños. Los monitores tienen muchísima paciencia y adaptan los entrenos a tu nivel."': '« Un club très accueillant et familial. L’académie est formidable pour les adultes comme pour les enfants. Les entraîneurs sont patients et adaptent chaque séance à votre niveau. »',
+            '"El mejor sitio en Campanillas para jugar al pádel y pasar un buen rato. Hay muy buen rollo entre los jugadores y organizan eventos geniales. ¡Muy recomendado!"': '« Le meilleur endroit de Campanillas pour jouer au padel et passer un bon moment. Excellente ambiance entre les joueurs et événements très réussis. Je recommande vivement ! »',
+            'Ver opiniones en Google': 'Voir les avis Google',
+            'Resolvemos tus dudas': 'Toutes vos réponses',
+            'Preguntas frecuentes sobre nuestras clases de pádel': 'Questions fréquentes sur nos cours de padel',
+            'Todo lo que necesitas saber antes de empezar a entrenar en FNS Padel Academy, en Campanillas (Málaga).': 'Tout ce qu’il faut savoir avant de commencer à FNS Padel Academy, à Campanillas (Málaga).',
+            '¿Dónde está FNS Padel Academy?': 'Où se trouve FNS Padel Academy ?',
+            '¿Hay clases de pádel para niños y adultos?': 'Proposez-vous des cours pour enfants et adultes ?',
+            '¿Necesito experiencia previa para apuntarme?': "Faut-il avoir de l'expérience ?",
+            '¿Se pueden reservar clases particulares de pádel?': 'Peut-on réserver des cours particuliers ?',
+            '¿Cómo puedo solicitar una clase de prueba?': "Comment demander un cours d'essai ?",
+            '¿Cuál es el horario de la academia?': "Quels sont les horaires de l'académie ?",
+            'Sí. Contamos con escuela infantil de 4 a 15 años, escuela de adultos y entrenamientos particulares o de competición. Consulta todos nuestros': 'Oui. Nous proposons une école jeunes de 4 à 15 ans, une école adultes et des entraînements particuliers ou de compétition. Découvrez tous nos',
+            'programas de pádel': 'programmes de padel',
+            'Entrenamos en el club': 'Nous nous entraînons au club',
+            ', en Travesía Santa Rosalía Maqueda, s/n, 29591 Málaga, en la zona de Campanillas. Puedes consultar la': ', Travesía Santa Rosalía Maqueda, s/n, 29591 Málaga, dans le secteur de Campanillas. Consultez',
+            'ubicación y las instalaciones': 'la localisation et les installations',
+            'antes de venir.': 'avant de venir.',
+            'No. Tenemos grupos para iniciación, nivel medio y avanzado. Adaptamos el entrenamiento al nivel físico, técnico y a los objetivos de cada alumno.': "Non. Nous avons des groupes débutants, intermédiaires et avancés, avec un entraînement adapté au niveau et aux objectifs de chacun.",
+            'Sí. Ofrecemos clases individuales o en pareja, además de grupos de competición y packs que combinan clases particulares y grupales.': 'Oui. Nous proposons des cours individuels ou à deux, des groupes de compétition et des packs combinant cours particuliers et collectifs.',
+            'Puedes solicitar información o tu primera clase de prueba por WhatsApp en el': 'Vous pouvez demander des informations ou un premier cours d’essai sur WhatsApp au',
+            'o mediante el': 'ou avec le',
+            'formulario de contacto': 'formulaire de contact',
+            'El horario general es de lunes a viernes de 09:00 a 22:00 y los sábados de 09:00 a 14:00. Para confirmar la disponibilidad de una clase concreta, consúltanos por WhatsApp.': 'Les horaires généraux sont du lundi au vendredi de 09:00 à 22:00 et le samedi de 09:00 à 14:00. Vérifiez la disponibilité des cours sur WhatsApp.',
+            '¡Únete a la Academia!': "Rejoignez l'académie !",
+            'Ponte en contacto con nosotros para resolver tus dudas o probar tu primera clase.': "Contactez-nous pour poser vos questions ou essayer votre premier cours.",
+            'Envíanos un mensaje': 'Envoyez-nous un message',
+            'Nombre Completo *': 'Nom complet *',
+            'Correo Electrónico': 'E-mail',
+            'Teléfono / WhatsApp *': 'Téléphone / WhatsApp *',
+            'Programa de Interés': 'Programme souhaité',
+            'Escuela Infantil': 'École jeunes',
+            'Escuela Infantil (Niños)': 'École jeunes (enfants)',
+            'Clases Particulares': 'Cours particuliers',
+            'Grupo de Competición': 'Groupe compétition',
+            'Otras consultas': 'Autres demandes',
+            'Mensaje *': 'Message *',
+            'Enviar Mensaje por WhatsApp': 'Envoyer via WhatsApp',
+            'Escribe tu nombre': 'Saisissez votre nom',
+            'Ej: 647847065': 'Ex. : 647847065',
+            'Cuéntanos tu nivel, disponibilidad u otras consultas...': 'Indiquez-nous votre niveau, vos disponibilités ou vos questions...',
+            'El nombre es requerido.': 'Votre nom est obligatoire.',
+            'Un número de teléfono válido es requerido.': 'Un numéro de téléphone valide est obligatoire.',
+            'El mensaje es requerido.': 'Le message est obligatoire.',
+            'WhatsApp Directo': 'WhatsApp direct',
+            'Escríbenos ahora mismo': 'Écrivez-nous maintenant',
+            'Ver nuestras publicaciones': 'Voir nos publications',
+            'Dirección': 'Adresse',
+            'Cómo llegar en Google Maps': 'Itinéraire sur Google Maps',
+            'Ver ruta en Google Maps': "Voir l'itinéraire sur Google Maps",
+            'Tu academia de confianza en Campanillas, Málaga. Pasión por el pádel, entrenamientos divertidos y competitivos.': 'Votre académie de confiance à Campanillas, Málaga. Passion du padel et entraînements ludiques et compétitifs.',
+            'Enlaces Rápidos': 'Liens rapides',
+            'Preguntas frecuentes': 'Questions fréquentes',
+            'Horarios de Clase': 'Horaires des cours',
+            'Lunes a Viernes:': 'Du lundi au vendredi :',
+            'Sábados:': 'Samedi :',
+            'Domingos:': 'Dimanche :',
+            'Cerrado (Consultar)': 'Fermé (nous consulter)',
+            'Todos los derechos reservados.': 'Tous droits réservés.',
+            '© 2026 FNS Padel Academy. Todos los derechos reservados.': '© 2026 FNS Padel Academy. Tous droits réservés.',
+            'Ubicados en': 'Situés à',
+            '¿Hablamos? 🎾': 'On en parle ? 🎾',
+            '¿Quieres ser uno de nuestros leoncitos?': 'Voulez-vous devenir l’un de nos lionceaux ?',
+            'Solicita más información': "Demandez plus d'informations"
+        }
+    };
+
+    const metadata = {
+        es: {
+            title: 'FNS Padel Academy | Clases de Pádel en Campanillas, Málaga',
+            description: 'Aprende y mejora tu juego en FNS Padel Academy, ubicada en el club La Mirada Pádel (Campanillas, Málaga). Clases de pádel para adultos, niños y competición con Funes y Raquel.'
+        },
+        en: {
+            title: 'FNS Padel Academy | Padel Lessons in Malaga',
+            description: 'Improve your game at FNS Padel Academy in Campanillas, Malaga. Padel lessons for adults, juniors and competition players in a friendly environment.'
+        },
+        fr: {
+            title: 'FNS Padel Academy | Cours de padel à Málaga',
+            description: 'Progressez à FNS Padel Academy à Campanillas, Málaga. Cours de padel pour adultes, jeunes et joueurs de compétition dans une ambiance familiale.'
+        }
+    };
+
+    function translateTextNodes(dictionary) {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+                if (!node.nodeValue.trim() || ['SCRIPT', 'STYLE'].includes(node.parentElement?.tagName)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+
+        let node;
+        while ((node = walker.nextNode())) {
+            const original = node.nodeValue;
+            const trimmed = original.trim();
+            if (dictionary[trimmed]) {
+                node.nodeValue = original.replace(trimmed, dictionary[trimmed]);
+            }
+        }
+    }
+
+    function translateAttributes(dictionary) {
+        document.querySelectorAll('[placeholder], [aria-label], [title], img[alt]').forEach((element) => {
+            ['placeholder', 'aria-label', 'title', 'alt'].forEach((attribute) => {
+                const value = element.getAttribute(attribute);
+                if (value && dictionary[value]) element.setAttribute(attribute, dictionary[value]);
+            });
+        });
+    }
+
+    document.documentElement.lang = language === 'es' ? 'es' : language;
+    document.querySelectorAll('.language-link').forEach((link) => {
+        const active = link.dataset.language === language;
+        link.classList.toggle('active', active);
+        if (active) link.setAttribute('aria-current', 'page');
+        const hash = window.location.hash;
+        if (hash) link.href += hash;
+    });
+
+    if (language !== 'es') {
+        const dictionary = translations[language];
+        translateTextNodes(dictionary);
+        translateAttributes(dictionary);
+    }
+
+    document.title = metadata[language].title;
+    const canonicalUrl = language === 'es'
+        ? 'https://adrianer1985.github.io/fns-padel-academy/'
+        : `https://adrianer1985.github.io/fns-padel-academy/?lang=${language}`;
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonicalUrl);
+    document.querySelector('meta[name="description"]')?.setAttribute('content', metadata[language].description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', metadata[language].title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', metadata[language].description);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', metadata[language].title);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', metadata[language].description);
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language === 'en' ? 'en_GB' : language === 'fr' ? 'fr_FR' : 'es_ES');
+
+    window.FNS_LANGUAGE = language;
+})();

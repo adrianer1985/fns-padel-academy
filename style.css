@@ -545,19 +545,34 @@ a {
     background: rgba(7, 9, 14, 0.68);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 1200;
+    flex: 0 0 auto;
 }
 
 .language-link {
-    width: 36px;
-    height: 36px;
-    display: grid;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     place-items: center;
     border-radius: 50%;
     font-size: 1.25rem;
-    line-height: 1;
+    line-height: 0.85;
     filter: grayscale(0.35);
     opacity: 0.72;
     transition: transform var(--transition-fast), opacity var(--transition-fast), background-color var(--transition-fast), filter var(--transition-fast);
+}
+
+.language-link small {
+    margin-top: 3px;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 0.52rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
 }
 
 .language-link:hover,
@@ -645,9 +660,9 @@ a {
     }
 
     .language-link {
-        width: 32px;
-        height: 32px;
-        font-size: 1.1rem;
+        min-width: 36px;
+        height: 38px;
+        font-size: 1.05rem;
     }
     
     /* Toggle Hamburger Animation */
@@ -674,6 +689,27 @@ a {
     .language-switcher {
         gap: 2px;
         padding: 3px;
+    }
+
+    .header-container {
+        padding-right: 10px;
+        padding-left: 12px;
+    }
+
+    .language-link {
+        min-width: 32px;
+        width: 32px;
+        height: 36px;
+    }
+
+    .language-link small {
+        font-size: 0.48rem;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        padding-right: 7px;
+        padding-left: 7px;
     }
 }
 

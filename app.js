@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -10px 0px'
         });
 
         revealElements.forEach(element => {
@@ -199,20 +199,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const promoClose = document.getElementById('promo-close');
 
     if (promoCollage && promoClose) {
+        const promoItems = promoCollage.querySelectorAll('.promo-item');
+        const promoGrid = promoCollage.querySelector('.promo-grid');
+        const promoTimerBar = promoCollage.querySelector('.promo-timer span');
+        const promoInstruction = promoCollage.querySelector('.promo-instruction');
+        const promoDuration = 5000;
         let promoCloseTimer;
+        let promoTimerStartedAt = 0;
+        let promoRemainingTime = promoDuration;
+        let expandedPromoItem = null;
+
+        const resetExpandedPromo = () => {
+            if (expandedPromoItem) {
+                expandedPromoItem.classList.remove('expanded');
+                expandedPromoItem.setAttribute('aria-pressed', 'false');
+            }
+            expandedPromoItem = null;
+            promoGrid?.classList.remove('has-expanded');
+            promoCollage.classList.remove('is-paused');
+            if (promoInstruction) promoInstruction.textContent = 'Toca un cartel para ampliarlo';
+        };
 
         const closePromoCollage = () => {
             promoCollage.classList.remove('active');
             promoCollage.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
             clearTimeout(promoCloseTimer);
+            resetExpandedPromo();
+        };
+
+        const resumePromoTimer = () => {
+            promoCollage.classList.remove('is-paused');
+            promoTimerStartedAt = performance.now();
+            promoCloseTimer = setTimeout(closePromoCollage, promoRemainingTime);
+        };
+
+        const pausePromoTimer = () => {
+            promoRemainingTime = Math.max(0, promoRemainingTime - (performance.now() - promoTimerStartedAt));
+            clearTimeout(promoCloseTimer);
+            promoCollage.classList.add('is-paused');
         };
 
         const openPromoCollage = () => {
+            promoRemainingTime = promoDuration;
             promoCollage.classList.add('active');
             promoCollage.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
-            promoCloseTimer = setTimeout(closePromoCollage, 5000);
+            if (promoTimerBar) {
+                promoTimerBar.style.animation = 'none';
+                void promoTimerBar.offsetWidth;
+                promoTimerBar.style.animation = `promo-countdown ${promoDuration}ms linear forwards`;
+            }
+            resumePromoTimer();
         };
 
         setTimeout(openPromoCollage, 800);
@@ -222,9 +260,37 @@ document.addEventListener('DOMContentLoaded', () => {
             if (event.target === promoCollage) closePromoCollage();
         });
 
+        promoItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (expandedPromoItem === item) {
+                    resetExpandedPromo();
+                    resumePromoTimer();
+                    return;
+                }
+
+                if (expandedPromoItem) {
+                    expandedPromoItem.classList.remove('expanded');
+                    expandedPromoItem.setAttribute('aria-pressed', 'false');
+                } else {
+                    pausePromoTimer();
+                }
+
+                expandedPromoItem = item;
+                item.classList.add('expanded');
+                item.setAttribute('aria-pressed', 'true');
+                promoGrid?.classList.add('has-expanded');
+                if (promoInstruction) promoInstruction.textContent = 'Toca de nuevo para volver al collage';
+            });
+        });
+
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && promoCollage.classList.contains('active')) {
-                closePromoCollage();
+                if (expandedPromoItem) {
+                    resetExpandedPromo();
+                    resumePromoTimer();
+                } else {
+                    closePromoCollage();
+                }
             }
         });
     }

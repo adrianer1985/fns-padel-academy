@@ -619,6 +619,33 @@ a {
     }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-container > .logo-container .logo-brand,
+    .header-btn,
+    .btn-music {
+        display: none;
+    }
+
+    .nav-list {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 0.82rem;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .language-link {
+        min-width: 32px;
+        width: 32px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
 /* Mobile Menu Active State */
 @media (max-width: 991px) {
     .nav {

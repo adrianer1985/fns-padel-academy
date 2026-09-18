@@ -143,18 +143,38 @@ document.addEventListener('DOMContentLoaded', () => {
             // Format WhatsApp Message
             const academyPhone = '34647847065'; // Spanish prefix +34 and phone number
             const name = nameInput.value.trim();
-            const email = emailInput.value.trim() || 'No especificado';
+            const currentLanguage = window.FNS_LANGUAGE || 'es';
+            const formCopy = {
+                es: {
+                    empty: 'No especificado',
+                    greeting: '¡Hola FNS Padel Academy! 🎾',
+                    intro: 'Me gustaría apuntarme a las clases o solicitar información:',
+                    name: 'Nombre', phone: 'Teléfono', email: 'Email', program: 'Programa de interés', message: 'Mensaje'
+                },
+                en: {
+                    empty: 'Not provided',
+                    greeting: 'Hello FNS Padel Academy! 🎾',
+                    intro: 'I would like to join the lessons or request more information:',
+                    name: 'Name', phone: 'Phone', email: 'Email', program: 'Program of interest', message: 'Message'
+                },
+                fr: {
+                    empty: 'Non renseigné',
+                    greeting: 'Bonjour FNS Padel Academy ! 🎾',
+                    intro: 'Je souhaiterais m’inscrire aux cours ou demander plus d’informations :',
+                    name: 'Nom', phone: 'Téléphone', email: 'E-mail', program: 'Programme souhaité', message: 'Message'
+                }
+            }[currentLanguage];
+            const email = emailInput.value.trim() || formCopy.empty;
             const phone = phoneInput.value.trim();
             const program = programSelect.value;
             const userMessage = messageInput.value.trim();
             
-            const text = `¡Hola FNS Padel Academy! 🎾\n\n` + 
-                         `Me gustaría apuntarme a las clases o solicitar información:\n\n` +
-                         `*Nombre:* ${name}\n` +
-                         `*Teléfono:* ${phone}\n` +
-                         `*Email:* ${email}\n` +
-                         `*Programa de interés:* ${program}\n\n` +
-                         `*Mensaje:* ${userMessage}`;
+            const text = `${formCopy.greeting}\n\n${formCopy.intro}\n\n` +
+                         `*${formCopy.name}:* ${name}\n` +
+                         `*${formCopy.phone}:* ${phone}\n` +
+                         `*${formCopy.email}:* ${email}\n` +
+                         `*${formCopy.program}:* ${program}\n\n` +
+                         `*${formCopy.message}:* ${userMessage}`;
             
             const encodedText = encodeURIComponent(text);
             const whatsappUrl = `https://wa.me/${academyPhone}?text=${encodedText}`;

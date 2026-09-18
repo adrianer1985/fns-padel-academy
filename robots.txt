@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adrianer1985.github.io/fns-padel-academy/sitemap.xml
+Sitemap: https://fnspadelacademy.com/sitemap.xml

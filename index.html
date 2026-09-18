@@ -35,62 +35,197 @@
     <meta name="twitter:image" content="https://adrianer1985.github.io/fns-padel-academy/assets/fns-padel-academy-social.jpg">
     <meta name="twitter:image:alt" content="Alumnos entrenando en FNS Padel Academy, Campanillas, Málaga">
     
-    <!-- JSON-LD Structured Data (LocalBusiness / SportsActivityLocation) -->
+    <!-- JSON-LD Structured Data (website, local business and services) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "FNS Padel Academy",
-      "@id": "https://adrianer1985.github.io/fns-padel-academy/#academy",
-      "description": "Academia de pádel para adultos, niños y competición en La Mirada Pádel, Campanillas, Málaga.",
-      "image": [
-        "https://adrianer1985.github.io/fns-padel-academy/assets/fns-padel-academy-social.jpg",
-        "https://adrianer1985.github.io/fns-padel-academy/assets/equipo-fns.webp",
-        "https://adrianer1985.github.io/fns-padel-academy/assets/escuela-infantil.webp"
-      ],
-      "logo": "https://adrianer1985.github.io/fns-padel-academy/assets/logo.png",
-      "url": "https://adrianer1985.github.io/fns-padel-academy/",
-      "telephone": "+34647847065",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Travesía Santa Rosalía Maqueda, s/n",
-        "addressLocality": "Santa Rosalía Maqueda",
-        "postalCode": "29591",
-        "addressRegion": "Málaga",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 36.721473,
-        "longitude": -4.567341
-      },
-      "areaServed": ["Campanillas", "Santa Rosalía Maqueda", "Málaga"],
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "09:00",
-          "closes": "22:00"
+          "@type": "WebSite",
+          "@id": "https://adrianer1985.github.io/fns-padel-academy/#website",
+          "url": "https://adrianer1985.github.io/fns-padel-academy/",
+          "name": "FNS Padel Academy",
+          "inLanguage": "es-ES",
+          "publisher": {
+            "@id": "https://adrianer1985.github.io/fns-padel-academy/#academy"
+          }
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Saturday"
+          "@type": "WebPage",
+          "@id": "https://adrianer1985.github.io/fns-padel-academy/#webpage",
+          "url": "https://adrianer1985.github.io/fns-padel-academy/",
+          "name": "FNS Padel Academy | Clases de Pádel en Campanillas, Málaga",
+          "description": "Academia de pádel para adultos, niños y competición en La Mirada Pádel, Campanillas, Málaga.",
+          "isPartOf": {
+            "@id": "https://adrianer1985.github.io/fns-padel-academy/#website"
+          },
+          "about": {
+            "@id": "https://adrianer1985.github.io/fns-padel-academy/#academy"
+          },
+          "inLanguage": "es-ES"
+        },
+        {
+          "@type": "SportsActivityLocation",
+          "@id": "https://adrianer1985.github.io/fns-padel-academy/#academy",
+          "name": "FNS Padel Academy",
+          "description": "Academia de pádel para adultos, niños y competición en La Mirada Pádel, Campanillas, Málaga.",
+          "slogan": "Hoy entrenan, mañana compiten, siempre crecen",
+          "image": [
+            "https://adrianer1985.github.io/fns-padel-academy/assets/fns-padel-academy-social.jpg",
+            "https://adrianer1985.github.io/fns-padel-academy/assets/equipo-fns.webp",
+            "https://adrianer1985.github.io/fns-padel-academy/assets/escuela-infantil.webp"
           ],
-          "opens": "09:00",
-          "closes": "14:00"
+          "logo": "https://adrianer1985.github.io/fns-padel-academy/assets/logo.png",
+          "url": "https://adrianer1985.github.io/fns-padel-academy/",
+          "telephone": "+34647847065",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Travesía Santa Rosalía Maqueda, s/n",
+            "addressLocality": "Santa Rosalía Maqueda",
+            "postalCode": "29591",
+            "addressRegion": "Málaga",
+            "addressCountry": "ES"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.721473,
+            "longitude": -4.567341
+          },
+          "hasMap": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xd72f02963f8306f:0x38695632b1d545f",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Málaga"
+            },
+            {
+              "@type": "Place",
+              "name": "Campanillas"
+            },
+            {
+              "@type": "Place",
+              "name": "Santa Rosalía Maqueda"
+            }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34647847065",
+            "contactType": "customer service",
+            "availableLanguage": "Spanish"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "22:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "14:00"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Clases y programas de pádel",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Escuela infantil de pádel",
+                  "description": "Clases de pádel para niños y niñas de 4 a 15 años en grupos reducidos por edades."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Escuela de pádel para adultos",
+                  "description": "Clases para adultos desde iniciación hasta nivel avanzado, con técnica, táctica y partidos organizados."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Clases particulares y competición",
+                  "description": "Entrenamiento individual, en pareja y grupos de competición con preparación específica."
+                }
+              }
+            ]
+          },
+          "sameAs": [
+            "https://www.instagram.com/fns_padelacademy/",
+            "https://playtomic.com/es/clubs/la-mirada-padel"
+          ]
         }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/fns_padelacademy/",
-        "https://playtomic.com/es/clubs/la-mirada-padel"
+      ]
+    }
+    </script>
+
+    <!-- FAQ content is also visible in the Preguntas Frecuentes section -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Dónde está FNS Padel Academy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FNS Padel Academy entrena en el club La Mirada Pádel, en Travesía Santa Rosalía Maqueda, s/n, 29591 Málaga, en la zona de Campanillas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay clases de pádel para niños y adultos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La academia cuenta con escuela infantil de 4 a 15 años, escuela de adultos y entrenamientos particulares o de competición."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito experiencia previa para apuntarme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Hay grupos para iniciación, nivel medio y avanzado. El entrenamiento se adapta al nivel físico, técnico y a los objetivos de cada alumno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se pueden reservar clases particulares de pádel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Se ofrecen clases individuales o en pareja, además de grupos de competición y packs que combinan clases particulares y grupales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo solicitar una clase de prueba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes solicitar información o tu primera clase de prueba por WhatsApp en el 647 847 065 o mediante el formulario de contacto de la web."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el horario de la academia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El horario general es de lunes a viernes de 09:00 a 22:00 y los sábados de 09:00 a 14:00. Para confirmar la disponibilidad de una clase concreta, consulta por WhatsApp."
+          }
+        }
       ]
     }
     </script>
@@ -553,6 +688,63 @@
             </div>
         </section>
 
+        <!-- FREQUENTLY ASKED QUESTIONS SECTION -->
+        <section class="faq section" id="preguntas">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Resolvemos tus dudas</span>
+                    <h2 class="section-title">Preguntas frecuentes sobre nuestras clases de pádel</h2>
+                    <p class="section-description">
+                        Todo lo que necesitas saber antes de empezar a entrenar en FNS Padel Academy, en Campanillas (Málaga).
+                    </p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item reveal-up">
+                        <summary>¿Dónde está FNS Padel Academy?</summary>
+                        <div class="faq-answer">
+                            <p>Entrenamos en el club <strong>La Mirada Pádel</strong>, en Travesía Santa Rosalía Maqueda, s/n, 29591 Málaga, en la zona de Campanillas. Puedes consultar la <a href="#instalaciones" class="faq-link">ubicación y las instalaciones</a> antes de venir.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-up">
+                        <summary>¿Hay clases de pádel para niños y adultos?</summary>
+                        <div class="faq-answer">
+                            <p>Sí. Contamos con escuela infantil de 4 a 15 años, escuela de adultos y entrenamientos particulares o de competición. Consulta todos nuestros <a href="#programas" class="faq-link">programas de pádel</a>.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-up">
+                        <summary>¿Necesito experiencia previa para apuntarme?</summary>
+                        <div class="faq-answer">
+                            <p>No. Tenemos grupos para iniciación, nivel medio y avanzado. Adaptamos el entrenamiento al nivel físico, técnico y a los objetivos de cada alumno.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-up">
+                        <summary>¿Se pueden reservar clases particulares de pádel?</summary>
+                        <div class="faq-answer">
+                            <p>Sí. Ofrecemos clases individuales o en pareja, además de grupos de competición y packs que combinan clases particulares y grupales.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-up">
+                        <summary>¿Cómo puedo solicitar una clase de prueba?</summary>
+                        <div class="faq-answer">
+                            <p>Puedes solicitar información o tu primera clase de prueba por WhatsApp en el <a href="https://wa.me/34647847065?text=Hola!%20Quiero%20reservar%20mi%20primera%20clase%20de%20prueba%20gratis%20en%20FNS%20Padel%20Academy." target="_blank" rel="noopener noreferrer" class="faq-link">647 847 065</a> o mediante el <a href="#contacto" class="faq-link">formulario de contacto</a>.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item reveal-up">
+                        <summary>¿Cuál es el horario de la academia?</summary>
+                        <div class="faq-answer">
+                            <p>El horario general es de lunes a viernes de 09:00 a 22:00 y los sábados de 09:00 a 14:00. Para confirmar la disponibilidad de una clase concreta, consúltanos por WhatsApp.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACT SECTION -->
         <section class="contact section" id="contacto">
             <div class="container">
@@ -691,6 +883,7 @@
                     <li><a href="#packs">Packs FNS</a></li>
                     <li><a href="#instalaciones">Instalaciones</a></li>
                     <li><a href="#testimonios">Opiniones</a></li>
+                    <li><a href="#preguntas">Preguntas frecuentes</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>

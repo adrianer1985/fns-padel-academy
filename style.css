@@ -1193,6 +1193,112 @@ a {
     margin-top: 40px;
 }
 
+/* --- FREQUENTLY ASKED QUESTIONS SECTION --- */
+.faq {
+    background-color: var(--bg-primary);
+}
+
+.faq-list {
+    display: grid;
+    gap: 14px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item:hover,
+.faq-item[open] {
+    border-color: var(--border-glow);
+    box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 64px;
+    padding: 18px 22px;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-full);
+    background-color: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+    font-size: 1.35rem;
+    font-weight: 500;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+    transform: rotate(180deg);
+    background-color: rgba(var(--accent-rgb), 0.18);
+}
+
+.faq-item summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -3px;
+    border-radius: var(--radius-md);
+}
+
+.faq-answer {
+    padding: 0 22px 22px;
+    color: var(--text-secondary);
+}
+
+.faq-answer p {
+    line-height: 1.75;
+}
+
+.faq-link {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.faq-link:hover {
+    color: var(--accent-hover);
+}
+
+@media (min-width: 768px) {
+    .faq-item summary {
+        min-height: 72px;
+        padding: 20px 28px;
+        font-size: 1.12rem;
+    }
+
+    .faq-answer {
+        padding: 0 28px 24px;
+    }
+}
+
 /* --- CONTACT SECTION --- */
 .contact {
     background-color: var(--bg-primary);

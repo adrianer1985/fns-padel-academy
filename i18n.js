@@ -172,6 +172,7 @@
             'Todos los derechos reservados.': 'All rights reserved.',
             '© 2026 FNS Padel Academy. Todos los derechos reservados.': '© 2026 FNS Padel Academy. All rights reserved.',
             'Ubicados en': 'Based at',
+            'Página web creada por': 'Website created by',
             '¿Hablamos? 🎾': 'Let’s Talk! 🎾',
             '¿Quieres ser uno de nuestros leoncitos?': 'Would you like to become one of our Lion Cubs?',
             'Solicita más información': 'Request More Information'
@@ -337,6 +338,7 @@
             'Todos los derechos reservados.': 'Tous droits réservés.',
             '© 2026 FNS Padel Academy. Todos los derechos reservados.': '© 2026 FNS Padel Academy. Tous droits réservés.',
             'Ubicados en': 'Situés à',
+            'Página web creada por': 'Site web créé par',
             '¿Hablamos? 🎾': 'On en parle ? 🎾',
             '¿Quieres ser uno de nuestros leoncitos?': 'Voulez-vous devenir l’un de nos lionceaux ?',
             'Solicita más información': "Demandez plus d'informations"
@@ -504,6 +506,7 @@
         'Todos los derechos reservados.': 'Alle rettigheder forbeholdes.',
         '© 2026 FNS Padel Academy. Todos los derechos reservados.': '© 2026 FNS Padel Academy. Alle rettigheder forbeholdes.',
         'Ubicados en': 'Vi holder til hos',
+        'Página web creada por': 'Hjemmeside skabt af',
         '¿Hablamos? 🎾': 'Skal vi tale sammen? 🎾',
         '¿Quieres ser uno de nuestros leoncitos?': 'Vil du være en af vores løveunger?',
         'Solicita más información': 'Få mere information'

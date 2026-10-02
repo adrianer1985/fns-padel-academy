@@ -11,6 +11,7 @@
 
     const translations = {
         en: {
+            'Aviso legal (español)': 'Legal notice (Spanish)',
             'Inicio': 'Home',
             'Sobre Nosotros': 'About Us',
             'Programas': 'Programs',
@@ -178,6 +179,7 @@
             'Solicita más información': 'Request More Information'
         },
         fr: {
+            'Aviso legal (español)': 'Mentions légales (espagnol)',
             'Inicio': 'Accueil',
             'Sobre Nosotros': 'À propos',
             'Programas': 'Programmes',
@@ -346,6 +348,7 @@
     };
 
     translations.da = {
+        'Aviso legal (español)': 'Juridiske oplysninger (spansk)',
         'Inicio': 'Forside',
         'Sobre Nosotros': 'Om os',
         'Programas': 'Programmer',
